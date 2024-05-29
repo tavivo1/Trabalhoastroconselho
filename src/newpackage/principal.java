@@ -138,7 +138,8 @@ public class principal extends javax.swing.JFrame {
         lbResp.setRows(5);
         lbResp.setToolTipText("");
         lbResp.setWrapStyleWord(true);
-        lbResp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lbResp.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 188, 60), 2, true));
+        lbResp.setMargin(new java.awt.Insets(0, 9, 0, 9));
         jScrollPane1.setViewportView(lbResp);
 
         lbFrase.setEditable(false);
@@ -148,7 +149,8 @@ public class principal extends javax.swing.JFrame {
         lbFrase.setLineWrap(true);
         lbFrase.setRows(5);
         lbFrase.setWrapStyleWord(true);
-        lbFrase.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        lbFrase.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(250, 188, 60), 2, true));
+        lbFrase.setMargin(new java.awt.Insets(0, 3, 0, 3));
         jScrollPane2.setViewportView(lbFrase);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -280,7 +282,8 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_edDiaActionPerformed
 
     private void btConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarActionPerformed
-        
+        lbResp.setBackground(Color.WHITE);
+        lbFrase.setBackground(Color.WHITE);
         String nome, tratamento, nascidoa;
         int dia, mes, ano;
 
@@ -313,6 +316,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_btConsultarActionPerformed
 
     private void btLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btLimparActionPerformed
+        
         edNome.setText(null);
         edAno.setText(null);
         edMes.setText(null);
@@ -320,6 +324,9 @@ public class principal extends javax.swing.JFrame {
         buttonGroup1.clearSelection();
         lbResp.setText(null);
         lbFrase.setText(null);
+        lbResp.setBackground(Color.DARK_GRAY);
+        lbFrase.setBackground(Color.DARK_GRAY);
+        
     }//GEN-LAST:event_btLimparActionPerformed
     public static String sortearFrase() {
         int sortear = (int) (Math.random() * 10) + 1;
